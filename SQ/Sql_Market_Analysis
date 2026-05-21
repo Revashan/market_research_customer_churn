@@ -1,0 +1,95 @@
+\** 1. Overall Churn Rate **\
+SELECT
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct
+FROM customer_market_analysis;
+
+\** 2. Churn by Contract Type **\
+SELECT
+    contract,
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges
+FROM customer_market_analysis
+GROUP BY contract
+ORDER BY churn_rate_pct DESC;
+
+\**3.Churn by Internet Service **\
+SELECT
+    internet_service,
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges
+FROM customer_market_analysis
+GROUP BY internet_service
+ORDER BY churn_rate_pct DESC;
+
+\**4. Product Count vs Churn **\
+SELECT
+    product_count,
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges
+FROM customer_market_analysis
+GROUP BY product_count
+ORDER BY product_count;
+
+\**5. Customer Need Gap Analysis **\
+SELECT
+    customer_need_gap,
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges
+FROM customer_market_analysis
+GROUP BY customer_need_gap
+ORDER BY total_customers DESC;
+
+\**6.Product Change Recommendation Analysis**\
+SELECT
+    segment_name,
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct,
+    ROUND(AVG(tenure), 2) AS avg_tenure,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges,
+    ROUND(AVG(total_charges), 2) AS avg_total_charges,
+    ROUND(AVG(product_count), 2) AS avg_product_count
+FROM customer_market_analysis
+GROUP BY segment_name
+ORDER BY churn_rate_pct DESC;
+
+\**7. Segment Performance**\
+SELECT
+    segment_name,
+    COUNT(*) AS total_customers,
+    SUM(churn_flag) AS churned_customers,
+    ROUND(100.0 * SUM(churn_flag) / COUNT(*), 2) AS churn_rate_pct,
+    ROUND(AVG(tenure), 2) AS avg_tenure,
+    ROUND(AVG(monthly_charges), 2) AS avg_monthly_charges,
+    ROUND(AVG(total_charges), 2) AS avg_total_charges,
+    ROUND(AVG(product_count), 2) AS avg_product_count
+FROM customer_market_analysis
+GROUP BY segment_name
+ORDER BY churn_rate_pct DESC;
+
+\**8. High-Risk Customers for Campaign **\
+SELECT
+    customer_id,
+    contract,
+    internet_service,
+    tenure,
+    monthly_charges,
+    total_charges,
+    product_count,
+    customer_need_gap,
+    churn_risk_category,
+    product_change_recommendation,
+    segment_name
+FROM customer_market_analysis
+WHERE churn_risk_category IN ('High Risk', 'Medium Risk', 'Churned')
+ORDER BY monthly_charges DESC;
