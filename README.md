@@ -22,6 +22,22 @@ IBM Telco Customer Churn dataset.
 5. Customer segmentation
 6. Retention campaign targeting
 
+## 📊 Power BI Dashboard
+
+### 🔹 Executive Summary
+![Executive](Screenshots/Executivesummary.png)
+
+> This dashboard shows overall churn rate, active customers, and revenue KPIs.
+### 🔹 Customer Segmentation
+![Segment](Screenshots/Customer_segmentation.png)
+
+> This page groups customers into behavioral segments for targeted marketing.
+
+### 🔹 Product Insights
+![Product](Screenshots/Product_need._Analysispng)
+
+> Shows product usage patterns and need gaps driving churn.
+
 ## Business Recommendations
 - Move high-risk month-to-month customers to long-term discounted contracts.
 - Bundle low-product customers into value packages.
