@@ -25,7 +25,7 @@ IBM Telco Customer Churn dataset.
 ## 📊 Power BI Dashboard
 
 ### 🔹 Executive Summary
-![Executive](screenshots/Executivesummary.png)
+![Executive](screenshots/Executive summary.png)
 
 > This dashboard shows overall churn rate, active customers, and revenue KPIs.
 ### 🔹 Customer Segmentation
