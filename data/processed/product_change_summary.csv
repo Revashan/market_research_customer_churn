@@ -1,0 +1,7 @@
+product_change_recommendation,customers,churned,churn_rate,avg_monthly_charges,avg_product_count,churn_rate_pct
+Bundle More Services with Retention Offer,24,24,1.0,31.25,1.5,100.0
+Cross-Sell Add-On Services,1252,0,0.0,31.566613418530352,1.8849840255591055,0.0
+Maintain Current Plan,2226,47,0.021114106019766397,54.709838274932615,2.3185085354896677,2.11141060197664
+Move to Long-Term Contract with Discount,1655,1655,1.0,73.01939577039275,2.8870090634441086,100.0
+Offer Price Optimization / Lower Plan,143,143,1.0,101.4055944055944,5.79020979020979,100.0
+Upsell Premium Loyalty Package,1743,0,0.0,91.05737234652898,6.036718301778543,0.0
