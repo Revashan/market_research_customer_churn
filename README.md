@@ -29,12 +29,12 @@ IBM Telco Customer Churn dataset.
 
 > This dashboard shows overall churn rate, active customers, and revenue KPIs.
 ### 🔹 Customer Segmentation
-![Segment](screenshots/Customer_segmentation.png)
+![Segment](screenshots/Customer_Segmentation.png)
 
 > This page groups customers into behavioral segments for targeted marketing.
 
 ### 🔹 Product Insights
-![Product](screenshots/Product_need_Analysis.png)
+![Product](screenshots/Product_need_analysis.png)
 
 > Shows product usage patterns and need gaps driving churn.
 
