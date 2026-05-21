@@ -34,7 +34,7 @@ IBM Telco Customer Churn dataset.
 > This page groups customers into behavioral segments for targeted marketing.
 
 ### 🔹 Product Insights
-![Product](screenshots/Product_need._Analysispng)
+![Product](screenshots/Product_need_Analysis.png)
 
 > Shows product usage patterns and need gaps driving churn.
 
