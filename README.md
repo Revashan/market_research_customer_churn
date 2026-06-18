@@ -76,7 +76,8 @@ Telecom companies face high customer churn, particularly from customers on flexi
 ### Executive Summary
 Overall churn rate, active vs churned customers, revenue KPIs, and monthly trend.
 
-[![Executive Summary](powerbi/screenshots/Executive_summary.png)
+[![Executive Summary](powerbi/screenshots/market_research_customer_churn_dashboard.png)
+(powerbi/screenshots/Executive_summary.png)
 
 ### Customer Segmentation
 Behavioural clusters for targeted marketing campaigns based on tenure, product count, and contract type.
